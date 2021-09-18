@@ -20,3 +20,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/', {
 
 app.use(require("../Develop/Routes/api routes"))
 app.use(require("../Develop/Routes/HTML routes"))
+app.listen(PORT, () => {
+    console.log("App is working on PORT 3000")
+})
