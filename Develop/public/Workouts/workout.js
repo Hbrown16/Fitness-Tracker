@@ -29,7 +29,11 @@ workoutSchema.virtual("totalDuration").get(function() {
   },0)
 })
 
-const Workout =
+const Workouts = mongoose.model("Workout", workoutSchema);
+module.exports = Workouts
+
+//code given
+
 // async function initWorkout() {
 //   const lastWorkout = await API.getLastWorkout();
 //   console.log("Last workout:", lastWorkout);
