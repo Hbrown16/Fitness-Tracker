@@ -44,6 +44,10 @@ router.get("/api/workouts/range", (req,res) => {
         console.log(dbWorkout);
         res.json(dbWorkout);
     }).catch(err => {
-        
-    })
+        res.json(err)
+    });
+});
+
+router.delete("/api/workouts", ({body}, res) => {
+    
 })
