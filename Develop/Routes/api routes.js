@@ -7,9 +7,10 @@ router.get("", (req, res) => {
     dbWorkout.forEach(workout => {
         var total = 0;
         workout.exercises.forEach(e => {
-            
-        })
-    })
+            total += e.duration;
+        });
+        workout.totalDuration =total;
+    });
 
 })
 })
