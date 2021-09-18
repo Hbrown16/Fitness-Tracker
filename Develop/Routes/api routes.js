@@ -42,5 +42,8 @@ router.get("/api/workouts/range", (req,res) => {
     db.Workout.find({}).then(dbWorkout => {
         console.log("IN THE GYM");
         console.log(dbWorkout);
+        res.json(dbWorkout);
+    }).catch(err => {
+        
     })
 })
