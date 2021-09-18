@@ -18,3 +18,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/', {
     useFindAndModify: false
 });
 
+app.use(require("../Develop/Routes/api routes"))
+app.use(require("../Develop/Routes/HTML routes"))
