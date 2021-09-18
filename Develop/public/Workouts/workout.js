@@ -13,9 +13,14 @@ const workoutSchema = new Schema({
     },
     weight: {type: Number},
     sets: {type: Number},
-    
+    reps: {type: Number},
+    distance: {type: Number},
+    duration: {type: Number}
   }]
-})
+}, {
+  
+}
+)
 // async function initWorkout() {
 //   const lastWorkout = await API.getLastWorkout();
 //   console.log("Last workout:", lastWorkout);
