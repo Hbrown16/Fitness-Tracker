@@ -49,5 +49,7 @@ router.get("/api/workouts/range", (req,res) => {
 });
 
 router.delete("/api/workouts", ({body}, res) => {
-    
+    db.Workout.findByIdAndDelete(body.id).then(() => {
+        
+    })
 })
