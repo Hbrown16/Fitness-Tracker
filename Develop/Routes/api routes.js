@@ -1,7 +1,7 @@
 const db = require("../Workouts");
 const router = require("express").Router();
 
-router.get("", (req, res) => {
+router.get("/api/workouts", (req, res) => {
     db.Workout.find({}).then(dbWorkout => {
         dbWorkout.forEach(workout => {
             var total = 0;
@@ -15,3 +15,9 @@ router.get("", (req, res) => {
      res.json(err);
  });
 });
+
+router.put("/api/workouts/:id", (req, res) => {
+    db.Workout.findOneAndUpdate(
+        
+    )
+})
