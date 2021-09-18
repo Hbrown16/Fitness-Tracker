@@ -15,5 +15,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/', {
     useNewUrlParse: true,
     useUnifiedTopogy: true,
     useCreateIndex: true,
-    
-})
+    useFindAndModify: false
+});
