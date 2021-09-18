@@ -18,9 +18,12 @@ const workoutSchema = new Schema({
     duration: {type: Number}
   }]
 }, {
-  
-}
-)
+    toJSON:{
+      virtuals: true
+    }
+})
+
+
 // async function initWorkout() {
 //   const lastWorkout = await API.getLastWorkout();
 //   console.log("Last workout:", lastWorkout);
