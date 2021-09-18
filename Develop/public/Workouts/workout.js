@@ -28,6 +28,8 @@ workoutSchema.virtual("totalDuration").get(function() {
     return total + current.duration;
   },0)
 })
+
+const Workout =
 // async function initWorkout() {
 //   const lastWorkout = await API.getLastWorkout();
 //   console.log("Last workout:", lastWorkout);
