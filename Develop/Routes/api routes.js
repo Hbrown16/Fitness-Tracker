@@ -37,3 +37,7 @@ router.post("/api/workouts", ({body}, res) => {
         res.json(err);
     });
 });
+
+router.get("/api/workouts/range", (req,res) => {
+    
+})
