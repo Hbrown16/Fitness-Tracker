@@ -11,6 +11,8 @@ const workoutSchema = new Schema({
       trim: true,
       required: "Type of exercise:"
     },
+    weight: {type: Number},
+    sets: {type: Number},
     
   }]
 })
