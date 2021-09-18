@@ -25,8 +25,8 @@ const workoutSchema = new Schema({
 
 workoutSchema.virtual("totalDuration").get(function() {
   return this.exercises.reduce(function(total,current) {
-    
-  })
+    return total + current.duration;
+  },0)
 })
 // async function initWorkout() {
 //   const lastWorkout = await API.getLastWorkout();
