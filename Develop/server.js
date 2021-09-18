@@ -13,5 +13,6 @@ app.use(express.static("public"));
 //mongo
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/', {
     useNewUrlParse: true,
+    useUnifiedTopogy: true,
     
 })
