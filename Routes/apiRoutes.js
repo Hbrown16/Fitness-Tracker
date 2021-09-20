@@ -2,19 +2,22 @@ const db = require("../Workouts");
 const router = require("express").Router();
 
 router.get("/api/workouts", (req, res) => {
-    db.Workout.find({}).then(dbWorkout => {
-        dbWorkout.forEach(workout => {
-            var total = 0;
-            workout.exercises.forEach(e => {
-                total += e.duration;
-            });
-        workout.totalDuration =total;
-    });
-    res.json(dbWorkout);
- }).catch(err => {
-     res.json(err);
- });
+    db.Workout.find({})
+    .then(dbWorkout => {
+        // console.log(dbWorkout)
+        // dbWorkout.forEach(workout => {
+        //     var total = 0;
+        //     workout.exercises.forEach(e => {
+        //         total += e.duration;
+        //     });
+        // workout.totalDuration =total;
+        res.json(dbWorkout);
+    })
+    // .catch(err => {
+    //  res.json(err);
+    // });
 });
+
 
 router.put("/api/workouts/:id", (req, res) => {
     db.Workout.findOneAndUpdate(
@@ -48,12 +51,12 @@ router.get("/api/workouts/range", (req,res) => {
     });
 });
 
-router.delete("/api/workouts", ({body}, res) => {
-    db.Workout.findByIdAndDelete(body.id).then(() => {
-        res.json(true)
-    }).catch(err => {
-        res.json(err)
-    });
-});
+// router.delete("/api/workouts", ({body}, res) => {
+//     db.Workout.findByIdAndDelete(body.id).then(() => {
+//         res.json(true)
+//     }).catch(err => {
+//         res.json(err)
+//     });
+// });
 
 module.exports = router;
