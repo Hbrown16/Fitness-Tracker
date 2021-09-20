@@ -11,15 +11,15 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //mongo
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
     useNewUrlParse: true,
     useUnifiedTopogy: true,
     useCreateIndex: true,
     useFindAndModify: false
 });
 
-app.use(require("../Develop/Routes/api routes"))
-app.use(require("../Develop/Routes/HTML routes"))
+app.use(require("./Routes/apiRoutes"))
+app.use(require("./Routes/HTMLRoutes"))
 app.listen(PORT, () => {
     console.log("App is working on PORT 3000")
 })
