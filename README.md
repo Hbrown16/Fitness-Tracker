@@ -25,7 +25,7 @@ For this assignment we were to create a workout tracker using frontend code that
 
 ## Links
 + [Github Repo Link](https://github.com/Hbrown16/Fitness-Tracker)
-+ [Deployed Link]()
++ [Deployed Link](https://fierce-ridge-32227.herokuapp.com/?id=6148e6d45ab431001604c7f2)
 
 ## Demo
-![Workout]()
+![Workout](./assets/tracker.gif)
